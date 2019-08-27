@@ -1,6 +1,5 @@
 package rules
 
-import com.schneider.q2o2.quote.pricing.dto.PriceDto
 import com.schneider.q2o2.quote.pricing.dto.QuoteDto
 
 rule "Price for GE"
