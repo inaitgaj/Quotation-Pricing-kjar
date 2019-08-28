@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+        xmlns="http://jboss.org/kie/6.0.0/kmodule">
+
+  <kbase name="KBase11" default="true" eventProcessingMode="cloud" equalsBehavior="equality" declarativeAgenda="enabled" packages="*">
+
+    <ksession name="KSession11_1" type="stateful" default="true"/>
+
+    <ksession name="KSession11_2" type="stateless" default="false" beliefSystem="jtms"/>
+
+  </kbase>
+
+  <kbase name="KBase21" default="false" eventProcessingMode="stream" equalsBehavior="equality" declarativeAgenda="enabled" packages="*" includes="KBase11">
+
+    <ksession name="KSession21_1" type="stateful" default="false" clockType="realtime">
+
+      <fileLogger file="drools.log" threaded="true" interval="10"/>
+
+      <workItemHandlers>
+
+        <workItemHandler name="name" type="org.domain.WorkItemHandler"/>
+
+      </workItemHandlers>
+
+      <listeners>
+
+        <ruleRuntimeEventListener type="org.domain.RuleRuntimeListener"/>
+
+        <agendaEventListener type="org.domain.FirstAgendaListener"/>
+
+        <agendaEventListener type="org.domain.SecondAgendaListener"/>
+
+        <processEventListener type="org.domain.ProcessListener"/>
+
+      </listeners>
+
+    </ksession>
+
+  </kbase>
+
+</kmodule>

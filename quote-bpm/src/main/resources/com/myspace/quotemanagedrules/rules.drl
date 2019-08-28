@@ -1,0 +1,33 @@
+package com.myspace.quotemanagedrules;
+import com.myspace.quotemanagedrules.QuoteDto;
+
+
+rule "quoteManagedFor1"
+
+dialect "mvel"
+ruleflow-group "quoteManagedGroup"
+
+when 
+
+q : QuoteDto(correlationId == "1") 
+
+then 
+
+q.setPrice(100);
+
+end 
+
+
+rule "quoteManagedFor2"
+
+dialect "mvel"
+ruleflow-group "quoteManagedGroup"
+
+when 
+
+q : QuoteDto(correlationId == "2")
+
+then 
+q.setPrice(200);
+
+end 
