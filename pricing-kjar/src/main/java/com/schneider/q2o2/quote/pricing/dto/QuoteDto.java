@@ -5,9 +5,9 @@ public class QuoteDto  {
 	private String id;
 	private String version;
 	private String correlationId;
-	private String oppurtunityId;
+	private String opportunityId;
 	private String accountId;
-	private String oppurtunityName;
+	private String opportunityName;
 	private int revision;
 	private Double price;
 
@@ -16,27 +16,27 @@ public class QuoteDto  {
 	}
 
 
-	public QuoteDto(String id, String version, String correlationId, String oppurtunityId, String accountId,
-			String oppurtunityName, int revision, Double price) {
+	public QuoteDto(String id, String version, String correlationId, String opportunityId, String accountId,
+			String opportunityName, int revision, Double price) {
 		super();
 		this.id = id;
 		this.version = version;
 		this.correlationId = correlationId;
-		this.oppurtunityId = oppurtunityId;
+		this.opportunityId = opportunityId;
 		this.accountId = accountId;
-		this.oppurtunityName = oppurtunityName;
+		this.opportunityName = opportunityName;
 		this.revision = revision;
 		this.price = price;
 	}
 
-	public String getOppurtunityId() {
-		return oppurtunityId;
+	public String getOpportunityId() {
+		return opportunityId;
 	}
 	public String getAccountId() {
 		return accountId;
 	}
-	public String getOppurtunityName() {
-		return oppurtunityName;
+	public String getOpportunityName() {
+		return opportunityName;
 	}
 	public int getRevision() {
 		return revision;
@@ -60,14 +60,14 @@ public class QuoteDto  {
 	public void setCorrelationId(String correlationId) {
 		this.correlationId = correlationId;
 	}
-	public void setOppurtunityId(String oppurtunityId) {
-		this.oppurtunityId = oppurtunityId;
+	public void setOpportunityId(String opportunityId) {
+		this.opportunityId = opportunityId;
 	}
 	public void setAccountId(String accountId) {
 		this.accountId = accountId;
 	}
-	public void setOppurtunityName(String oppurtunityName) {
-		this.oppurtunityName = oppurtunityName;
+	public void setOpportunityName(String opportunityName) {
+		this.opportunityName = opportunityName;
 	}
 	public void setRevision(int revision) {
 		this.revision = revision;
